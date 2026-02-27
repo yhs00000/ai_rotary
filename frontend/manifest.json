@@ -1,6 +1,6 @@
 {
-  "name": "AI 决定转盘",
-  "short_name": "决定转盘",
+  "name": "AI 吃什么转盘",
+  "short_name": "今天吃什么",
   "description": "让星火大模型帮你做选择的无缝语音智能转盘",
   "start_url": "/",
   "display": "standalone",
@@ -16,3 +16,4 @@
     }
   ]
 }
+
