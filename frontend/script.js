@@ -242,7 +242,7 @@ async function callBackendAPI(text) {
     setStatus(`正在向星火大模型请求分析...`, 'working');
 
     try {
-        const response = await fetch('http://127.0.0.1:5000/analyze', {
+        const response = await fetch('https://ai-rotary-back.onrender.com/analyze', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ text: text })
@@ -280,3 +280,4 @@ document.addEventListener('DOMContentLoaded', () => {
     init();
     setupVoice();
 });
+
