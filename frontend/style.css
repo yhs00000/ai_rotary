@@ -3,7 +3,7 @@
     --bg-color: #0d0f1a;
     --text-main: #ffffff;
     --text-muted: #94a3b8;
-    
+
     --accent-primary: #8b5cf6;
     --accent-secondary: #ec4899;
     --accent-tertiary: #3b82f6;
@@ -37,7 +37,10 @@ body {
 /* 动态背景 Blobs */
 .background-blobs {
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: -1;
     overflow: hidden;
 }
@@ -51,28 +54,39 @@ body {
 }
 
 .blob-1 {
-    top: -10%; left: -10%;
-    width: 50vw; height: 50vw;
+    top: -10%;
+    left: -10%;
+    width: 50vw;
+    height: 50vw;
     background: radial-gradient(circle, var(--accent-primary) 0%, transparent 70%);
 }
 
 .blob-2 {
-    bottom: -20%; right: -10%;
-    width: 60vw; height: 60vw;
+    bottom: -20%;
+    right: -10%;
+    width: 60vw;
+    height: 60vw;
     background: radial-gradient(circle, var(--accent-secondary) 0%, transparent 70%);
     animation-delay: -5s;
 }
 
 .blob-3 {
-    top: 30%; left: 40%;
-    width: 40vw; height: 40vw;
+    top: 30%;
+    left: 40%;
+    width: 40vw;
+    height: 40vw;
     background: radial-gradient(circle, var(--accent-tertiary) 0%, transparent 70%);
     animation-delay: -10s;
 }
 
 @keyframes float {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(5%, 10%) scale(1.1); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(5%, 10%) scale(1.1);
+    }
 }
 
 /* 头部 */
@@ -93,6 +107,7 @@ body {
 
 .app-header h1 span {
     background: linear-gradient(135deg, #a78bfa, #f472b6);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -185,9 +200,11 @@ body {
 
 .ripple-ring {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
     border-radius: 14px;
     box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
     pointer-events: none;
@@ -198,9 +215,17 @@ body {
 }
 
 @keyframes ring-pulse {
-    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
-    70% { box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(239, 68, 68, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    }
 }
 
 /* 状态文本 */
@@ -215,7 +240,8 @@ body {
 }
 
 .pulse-dot {
-    width: 8px; height: 8px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: var(--text-muted);
     transition: background-color 0.3s;
@@ -233,8 +259,13 @@ body {
 }
 
 @keyframes dot-blink {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* 文本域 */
@@ -293,9 +324,17 @@ textarea::placeholder {
 }
 
 @keyframes gradient-shift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* 结果显示 */
@@ -312,6 +351,7 @@ textarea::placeholder {
     font-size: 1.5rem;
     font-weight: 800;
     background: linear-gradient(to right, #ffffff, #cbd5e1);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.3s ease;
@@ -320,6 +360,7 @@ textarea::placeholder {
 .result-text.winner {
     font-size: 1.8rem;
     background: linear-gradient(135deg, #fcd34d, #f59e0b);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
@@ -327,9 +368,19 @@ textarea::placeholder {
 }
 
 @keyframes winner-pop {
-    0% { transform: scale(0.8); opacity: 0; }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); opacity: 1; }
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* 右侧转盘区 */
@@ -345,8 +396,8 @@ textarea::placeholder {
 
 .wheel-container {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    max-width: 400px;
     aspect-ratio: 1 / 1;
     display: flex;
     justify-content: center;
@@ -355,14 +406,16 @@ textarea::placeholder {
 
 @media (max-width: 500px) {
     .wheel-container {
-        width: 300px;
-        height: 300px;
+        max-width: 320px;
     }
 }
 
 .wheel-glow {
     position: absolute;
-    top: -5%; left: -5%; right: -5%; bottom: -5%;
+    top: -5%;
+    left: -5%;
+    right: -5%;
+    bottom: -5%;
     border-radius: 50%;
     background: conic-gradient(from 0deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1), rgba(139, 92, 246, 0.1));
     filter: blur(20px);
@@ -374,7 +427,7 @@ canvas {
     height: 100%;
     border-radius: 50%;
     box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.05),
-                0 0 30px rgba(0, 0, 0, 0.5);
+        0 0 30px rgba(0, 0, 0, 0.5);
     z-index: 1;
     transition: transform 4s cubic-bezier(0.15, 0.9, 0.1, 1);
     will-change: transform;
@@ -382,13 +435,15 @@ canvas {
 
 .center-cap {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    width: 40px; height: 40px;
+    width: 40px;
+    height: 40px;
     background: radial-gradient(circle at 30% 30%, #475569, #0f172a);
     border-radius: 50%;
     z-index: 2;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5), inset 0 2px 4px rgba(255,255,255,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.2);
     border: 3px solid #1e293b;
 }
 
@@ -402,14 +457,16 @@ canvas {
     display: flex;
     flex-direction: column;
     align-items: center;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
 }
 
 .pointer {
-    width: 0; height: 0;
+    width: 0;
+    height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-top: 35px solid #f8fafc; /* 白色箭头 */
+    border-top: 35px solid #f8fafc;
+    /* 白色箭头 */
     position: relative;
     z-index: 2;
 }
@@ -417,9 +474,10 @@ canvas {
 .pointer::after {
     content: '';
     position: absolute;
-    top: -35px; left: -10px;
+    top: -35px;
+    left: -10px;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 25px solid #e2e8f0; /* 内层阴影效果 */
+    border-top: 25px solid #e2e8f0;
+    /* 内层阴影效果 */
 }
-

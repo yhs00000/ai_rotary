@@ -1,0 +1,18 @@
+{
+  "name": "AI 决定转盘",
+  "short_name": "决定转盘",
+  "description": "让星火大模型帮你做选择的无缝语音智能转盘",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0f1a",
+  "theme_color": "#0d0f1a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

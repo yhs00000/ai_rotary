@@ -279,5 +279,11 @@ document.addEventListener('DOMContentLoaded', () => {
     itemsInput.value = "汉堡\n火锅\n烤肉\n轻食沙拉\n麻辣烫\n寿司🍣";
     init();
     setupVoice();
-});
 
+    // Register Service Worker for PWA
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('Service Worker Registred!', reg))
+            .catch(err => console.error('Service Worker Registration failed', err));
+    }
+});
